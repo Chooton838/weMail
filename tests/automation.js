@@ -1,13 +1,16 @@
-const {test} = require('@playwright/test');
+const { test } = require('@playwright/test');
+const { base_url, subscriber_data } = require('../utils/data');
 
-module.exports.automation = function () {
+function automation() {
 
-    test("automation", async({ page }) => {
+    test("automation", async ({ page }) => {
 
-    await page.goto("https://stagingwp.getwemail.io/wp-admin/admin.php?page=wemail#/");
-    await page.locator("//*[@id=\"toplevel_page_wemail\"]/ul/li[4]/a").click();
-  
-    await page.waitForTimeout(3000);
-    //console.log(a+5);
+        await page.goto(base_url);
+        await page.locator("test").click();
+        await page.waitForTimeout(3000);
     })
+}
+
+module.exports = {
+    automation,
 }

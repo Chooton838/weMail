@@ -1,32 +1,30 @@
-const {test} = require('@playwright/test');
-const data = require("../utils/data");
+const { test } = require('@playwright/test');
+const { camp_data, list_data } = require("../utils/data");
 
 const login = require("./login");
 const camp = require("./campaign");
 const list = require("./list.js");
 const auto = require("./automation");
+const subscriber = require("./subscriber");
 
-const camp_name = data.camp.camp_name;
-const camp_subject = data.camp.camp_subject;
-const lists_name = data.camp.lists_name;
+test.describe.configure({ mode: "serial" });
 
-const list_name = data.list.list_name;
-const list_description = data.list.list_description;
+test.describe("wemail Automation", async () => {
 
-test.describe.configure({mode: "serial"});
+  login.login();
 
-test.describe("wemail Automation", async() => {
-
-  //login.login();
-
-  //camp.campaign_create(camp_name, camp_subject, lists_name);
-  camp.campaign_details(camp_name);
-  //camp.campaign_delete(camp_name);
+  //camp.campaign_create(camp_data.camp_name, camp_data.camp_subject, camp_data.lists_name);
+  //camp.campaign_details(camp_data.camp_name);
+  //camp.campaign_delete(camp_data.camp_name);
 
   //auto.automation();
 
-  //list.list_create(list_name, list_description);
-  //list.list_details(list_name);
-  //list.list_delete(list_name);
+  //list
+  //list.list_create(list_data.list_name, list_data.list_description);
+  //list.list_details(list_data.list_name);
+  //list.list_delete(list_data.list_name);
+
+  //Subscriber
+  subscriber.create_subscriber(list_data.list_name);
 
 })

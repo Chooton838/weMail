@@ -1,6 +1,12 @@
-module.exports ={
+module.exports = {
 
-    camp:{
+    lgn: {
+        email: '//*[@id="user_login"]',
+        pass: '//*[@id="user_pass"]',
+        submit: '//*[@id="wp-submit"]',
+    },
+
+    camp: {
 
         //locators for campaign create
         campaign: "//*[@id=\"toplevel_page_wemail\"]/ul/li[3]/a",
@@ -17,7 +23,7 @@ module.exports ={
         peview_next: '//*[@id="wemail-admin"]/div/div/div[2]/div/div[2]/a[2]',
         send_next: '//*[@id="wemail-admin"]/div/div/div[2]/div[2]/div[1]/div[6]/a[2]',
         send: '//button[@class="wem-button-primary wem-ml-4"]',
-        
+
         //locators for campaign delete
         camp_search: '//input[@placeholder="Search campaign..."]',
         camp_hover: '//button[@class="wem-px-3"]',
@@ -27,5 +33,17 @@ module.exports ={
         //locators for campaign details
         camp_details: '//a[contains(text(), "View")]',
 
-    }
-    }
+    },
+
+    subscriber: {
+        list_navigate: "//*[@id=\"toplevel_page_wemail\"]/ul/li[5]/a",
+        search_list: "//*[@id=\"wemail-admin\"]/div/div[2]/div[2]/form/div/input",
+        select_list: "//*[@id=\"wemail-admin\"]/div/div[2]/table/tbody/tr/td[2]/a",
+
+        add_subscriber: '//a[contains(text(), "Add Subscriber")]',
+        new_subscriber: '//button[contains(text(), "Create New Subscriber")]',
+        subscriber_email: '#subscriber-modal-email-input',
+        save_subscriber: '//*[@id="wemail-admin"]/div/div[3]/div[3]/div/div/form/fieldset/div[3]/span/button[1]',
+    },
+
+}
