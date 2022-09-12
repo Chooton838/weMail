@@ -36,6 +36,7 @@ module.exports = {
     },
 
     subscriber: {
+        //Create Subscriber
         list_navigate: "//*[@id=\"toplevel_page_wemail\"]/ul/li[5]/a",
         search_list: "//*[@id=\"wemail-admin\"]/div/div[2]/div[2]/form/div/input",
         select_list: "//*[@id=\"wemail-admin\"]/div/div[2]/table/tbody/tr/td[2]/a",
@@ -44,6 +45,19 @@ module.exports = {
         new_subscriber: '//button[contains(text(), "Create New Subscriber")]',
         subscriber_email: '#subscriber-modal-email-input',
         save_subscriber: '//*[@id="wemail-admin"]/div/div[3]/div[3]/div/div/form/fieldset/div[3]/span/button[1]',
+
+        //Add Subscriber
+        map_existing_subscriber: '//button[contains(text(), "Search Existing Subscribers")]',
+        find_subscriber: '//span[@class="multiselect__placeholder" and contains(text(),"Search subscribers")]',
+        subscriber_email: '//*[@class="multiselect__input" and @placeholder="Search subscribers"]',
+        map_subscriber: '//button[@type="button" and contains(text(), "Add Subscribers")][1]',
+
+        //Delete Subscriber
+        search_subscriber: '//input[@type="search" and @placeholder="Search subscriber..."]',
+        select_subscriber: '//table[@class="wemail-table"]/tbody/tr[1]/td[2]/a',
+        delete_subscriber: '//button[@type="button" and contains(text(), "Delete Subscriber")]',
+        delete: '//div[@class="swal-button-container"]/button[contains(text(), "Delete")]',
+
     },
 
 }

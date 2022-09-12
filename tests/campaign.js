@@ -29,7 +29,6 @@ function campaign_create(camp_name, camp_subject, lists_name) {
     })
 }
 
-
 function campaign_delete(camp_name) {
     test("campaign delete", async ({ page }) => {
 
@@ -43,7 +42,6 @@ function campaign_delete(camp_name) {
         await page.waitForTimeout(3000);
     })
 }
-
 
 function campaign_details(camp_name) {
     test("campaign details", async ({ page }) => {

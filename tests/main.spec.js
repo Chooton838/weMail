@@ -1,5 +1,5 @@
 const { test } = require('@playwright/test');
-const { camp_data, list_data } = require("../utils/data");
+const { camp_data, list_data, subscriber_data } = require("../utils/data");
 
 const login = require("./login");
 const camp = require("./campaign");
@@ -11,7 +11,7 @@ test.describe.configure({ mode: "serial" });
 
 test.describe("wemail Automation", async () => {
 
-  login.login();
+  //login.login();
 
   //camp.campaign_create(camp_data.camp_name, camp_data.camp_subject, camp_data.lists_name);
   //camp.campaign_details(camp_data.camp_name);
@@ -25,6 +25,9 @@ test.describe("wemail Automation", async () => {
   //list.list_delete(list_data.list_name);
 
   //Subscriber
-  subscriber.create_subscriber(list_data.list_name);
+  //subscriber.create_subscriber(list_data.list_name);
+  //subscriber.add_subscriber(list_data.list_name);
+  subscriber.details_subscriber(list_data.list_name, subscriber_data.subscriber_email);
+  //subscriber.delete_subscriber(list_data.list_name, subscriber_data.subscriber_email);
 
 })
