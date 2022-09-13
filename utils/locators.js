@@ -60,4 +60,24 @@ module.exports = {
 
     },
 
+    auto: {
+        //Create Automation
+        navigate: '//ul[@class="wp-submenu wp-submenu-wrap"][1]/li[4]/a[contains(text(), "Automations")]',
+        new_auto: '//div/a[contains(text(), "New Automation")]',
+        select_template: '//h3[contains(text(), "Product Purchase")]',
+        create_auto: '//button[contains(text(), "Create Automation")]',
+        change_status: '//button/span[contains(text(), "draft")]',
+        active_auto: '//form/ul/li/input[@type="radio" and @value="active"]',
+        auto_home: '//div[@class="workflow-top-bar"]/a',
+
+        //Delete Automation
+        search_auto: '//input[@type="search" and @placeholder="Search automation..."]',
+        hover_menu: '//tbody/tr[1]//button[@class="wem-px-3"]/*[1]',
+        click_delete: '//tbody/tr[1]//div/a[contains(text(), "Delete")]',
+        delete: '//div[@class="swal-button-container"]/button[contains(text(), "Delete")]',
+
+        select_automation: '//tbody/tr[1]/td[2]/h4/a',
+
+    },
+
 }

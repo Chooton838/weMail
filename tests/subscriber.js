@@ -55,7 +55,6 @@ function details_subscriber(list_name, subscriber_email) {
         await page.locator(subscriber.select_list).click();
 
         await page.locator(subscriber.search_subscriber).fill(subscriber_email);
-        //await page.waitForTimeout(3000);
         await page.locator(subscriber.select_subscriber).click();
         await page.waitForTimeout(3000);
 
@@ -72,7 +71,6 @@ function delete_subscriber(list_name, subscriber_email) {
         await page.locator(subscriber.select_list).click();
 
         await page.locator(subscriber.search_subscriber).fill(subscriber_email);
-        //await page.waitForTimeout(3000);
         await page.locator(subscriber.select_subscriber).click();
         await page.waitForTimeout(3000);
         await page.locator(subscriber.delete_subscriber).click();

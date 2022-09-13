@@ -2,7 +2,7 @@
   "cookies": [
     {
       "name": "wordpress_sec_dced7a991dfc5029eb2ce8ddf4436fc3",
-      "value": "chooton%7C1663130771%7CzqO7Op8GJp1AwJ9tkAeljH3HDKMDykyntTE04nSZGUa%7C10d0b0320ae17a71d3f46ffbb4d699dd56d706eab86c527e0a6f67f376dce358",
+      "value": "chooton%7C1663265619%7C2ME4FU22u3s4hD0JKHZvHK7OrnJUNT58WTxTSzAVaE8%7Cdb8540f775a4fa97da3672a0312a2a0801d492a070d8e02e3804ad6969a8f68d",
       "domain": "stagingwp.getwemail.io",
       "path": "/wp-content/plugins",
       "expires": -1,
@@ -12,7 +12,7 @@
     },
     {
       "name": "wordpress_sec_dced7a991dfc5029eb2ce8ddf4436fc3",
-      "value": "chooton%7C1663130771%7CzqO7Op8GJp1AwJ9tkAeljH3HDKMDykyntTE04nSZGUa%7C10d0b0320ae17a71d3f46ffbb4d699dd56d706eab86c527e0a6f67f376dce358",
+      "value": "chooton%7C1663265619%7C2ME4FU22u3s4hD0JKHZvHK7OrnJUNT58WTxTSzAVaE8%7Cdb8540f775a4fa97da3672a0312a2a0801d492a070d8e02e3804ad6969a8f68d",
       "domain": "stagingwp.getwemail.io",
       "path": "/wp-admin",
       "expires": -1,
@@ -22,7 +22,7 @@
     },
     {
       "name": "PHPSESSID",
-      "value": "jk5nipiv8p9l8l53a789p979ic",
+      "value": "o7io270lgk743pe2sss02a18tk",
       "domain": "stagingwp.getwemail.io",
       "path": "/",
       "expires": -1,
@@ -42,7 +42,7 @@
     },
     {
       "name": "wordpress_logged_in_dced7a991dfc5029eb2ce8ddf4436fc3",
-      "value": "chooton%7C1663130771%7CzqO7Op8GJp1AwJ9tkAeljH3HDKMDykyntTE04nSZGUa%7Ce206c06389d3d5626fc35ed0c9fac527eefb29089e89465657f3e93cb0e16b55",
+      "value": "chooton%7C1663265619%7C2ME4FU22u3s4hD0JKHZvHK7OrnJUNT58WTxTSzAVaE8%7C177874c6c0119f90bf109080d2333214459c51bc805267edbda1d03d9aff1063",
       "domain": "stagingwp.getwemail.io",
       "path": "/",
       "expires": -1,
@@ -55,17 +55,17 @@
       "value": "libraryContent%3Dbrowse%26ampampampampampampampampampamphidetb%3D1",
       "domain": "stagingwp.getwemail.io",
       "path": "/",
-      "expires": 1694493972.261195,
+      "expires": 1694628819.499308,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
     },
     {
       "name": "wp-settings-time-69",
-      "value": "1662957972",
+      "value": "1663092820",
       "domain": "stagingwp.getwemail.io",
       "path": "/",
-      "expires": 1694493972.261433,
+      "expires": 1694628819.499351,
       "httpOnly": false,
       "secure": true,
       "sameSite": "Lax"
