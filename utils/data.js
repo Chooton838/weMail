@@ -21,6 +21,11 @@ module.exports = {
             "qa1@wedevsqa.com", "qa2@wedevsqa.com", "qa3@wedevsqa.com"],
         subscriber_email: 'qa1@wedevsqa.com',
 
-    }
+    },
+
+    form_data: {
+        form_name: 'Test Form N1',
+        list_name: 'edd',
+    },
 
 }
