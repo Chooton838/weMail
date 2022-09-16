@@ -80,4 +80,32 @@ module.exports = {
 
     },
 
+    form: {
+        //create form
+        navigate: '//ul[@class="wp-submenu wp-submenu-wrap"][1]/li[6]/a[contains(text(), "Forms")]',
+        new_form: '//a[contains(text(), "New Form")]',
+        hover_template: '(//div[@class="form-template"])[1]',
+        select_template: '(//button[@type="button" and contains(text(),"Select")])[1]',
+        select_list: '.multiselect__placeholder',
+        form_name: '#name',
+        list_name: '//input[@placeholder="Select Lists"]',
+        save: '//button[@type="submit" and contains(text(), "Save")]',
+        save_form: '//button[@class="button button-primary" and contains(text(), "Save")]',
+
+        //trash form
+        search_form: '//input[@placeholder="Search form..."]',
+        select_form: '(//button[@class="wem-px-3"])[1]',
+        trash_form: '(//a[@class="!wem-text-red-500" and contains(text(),"Trash")])[1]',
+
+        //delete form
+        switch_trash: '//a[contains(text(), "Trashed")]',
+        delete_form: '(//a[contains(text(), "Delete Permanently")])[1]',
+        delete: '//button[contains(text(),"Delete")]',
+
+        //update for status
+        change_status: '//tbody/tr[1]/td[@class="wem-pl-[8px]"][7]/label',
+
+
+    },
+
 }

@@ -1,17 +1,21 @@
+require('dotenv').config()
 const { test } = require('@playwright/test');
-const { camp_data, list_data, subscriber_data } = require("../utils/data");
+const { camp_data, list_data, subscriber_data,
+  form_data } = require("../utils/data");
 
 const login = require("./login");
 const camp = require("./campaign");
 const list = require("./list.js");
 const auto = require("./automation");
 const subscriber = require("./subscriber");
+const forms = require("./forms.js");
 
 test.describe.configure({ mode: "serial" });
 
 test.describe("wemail Automation", async () => {
 
-  //login.login();
+  /* ---- Login ---- */
+  login.login(process.env.USER_NAME, process.env.PASSWORD);
 
   /* ---- List ---- */
   //list.list_create(list_data.list_name, list_data.list_description);
@@ -32,8 +36,14 @@ test.describe("wemail Automation", async () => {
   /* ---- Automation ---- */
   //auto.create_automation();
   //auto.delete_automation("Product Purchase");
-  //auto.update_automation("Welcome Message");
+  //auto.update_automation("Product Purchase");
   //auto.active_automation("Product Purchase");
   //auto.details_automation("Product Purchase");
+
+  /* ---- Forms ---- */
+  //forms.create_form(form_data.form_name, form_data.list_name);
+  //forms.trash_form(form_data.form_name);
+  //forms.delete_form(form_data.form_name);
+  //forms.update_form_status(form_data.form_name);
 
 })
