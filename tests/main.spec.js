@@ -15,7 +15,7 @@ test.describe.configure({ mode: "serial" });
 test.describe("wemail Automation", async () => {
 
   /* ---- Login ---- */
-  login.login(process.env.USER_NAME, process.env.PASSWORD);
+  //login.login(process.env.USER_NAME, process.env.PASSWORD);
 
   /* ---- List ---- */
   //list.list_create(list_data.list_name, list_data.list_description);
@@ -27,6 +27,9 @@ test.describe("wemail Automation", async () => {
   //subscriber.add_subscriber(list_data.list_name);
   //subscriber.details_subscriber(list_data.list_name, subscriber_data.subscriber_email);
   //subscriber.delete_subscriber(list_data.list_name, subscriber_data.subscriber_email);
+  subscriber.subscribe_subscriber(list_data.list_name, subscriber_data.subscriber_email);
+  //subscriber.unsubscribe_subscriber(list_data.list_name, subscriber_data.subscriber_email);
+
 
   /* ---- Campaign ---- */
   //camp.campaign_create(camp_data.camp_name, camp_data.camp_subject, camp_data.lists_name);

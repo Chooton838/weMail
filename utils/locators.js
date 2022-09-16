@@ -58,6 +58,11 @@ module.exports = {
         delete_subscriber: '//button[@type="button" and contains(text(), "Delete Subscriber")]',
         delete: '//div[@class="swal-button-container"]/button[contains(text(), "Delete")]',
 
+        //Unsubscribe Subscriber
+        check_subscriber: '(//input[@type="checkbox"])[1]',
+        mark_subscriber_unsubscribed: '//button[contains(text(), "Mark as unsubscribed")]',
+        mark_subscriber_subscribed: '//button[contains(text(), "Mark as subscribed")]',
+
     },
 
     auto: {

@@ -22,6 +22,21 @@ function create_form(form_name, list_name) {
     })
 }
 
+function details_form(form_name) {
+
+    test("details form", async ({ page }) => {
+
+        await page.goto(base_url);
+        await page.locator(form.navigate).click();
+        await page.locator(form.search_form).fill(form_name);
+        await page.locator(form.select_form).hover();
+
+        await page.locator(form.trash_form).click();
+        await page.locator(form.search_form).fill("");
+        await page.waitForTimeout(3000);
+    })
+}
+
 function trash_form(form_name) {
 
     test("trash form", async ({ page }) => {
@@ -68,6 +83,7 @@ function update_form_status(form_name) {
 
 module.exports = {
     create_form,
+    details_form,
     trash_form,
     delete_form,
     update_form_status,

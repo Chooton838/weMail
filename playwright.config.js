@@ -16,13 +16,13 @@ const { devices } = require('@playwright/test');
 const config = {
   testDir: './tests',
   /* Maximum time one test can run for. */
-  timeout: 50 * 1000,
+  timeout: 50 * 1000 * 10,
   expect: {
     /**
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    timeout: 5000
+    timeout: 8000
   },
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -48,7 +48,7 @@ const config = {
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     launchOptions: {
-      slowMo: 1000,
+      slowMo: 3000,
     },
   },
 

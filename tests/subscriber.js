@@ -81,10 +81,50 @@ function delete_subscriber(list_name, subscriber_email) {
     })
 }
 
+function unsubscribe_subscriber(list_name, subscriber_email) {
+    test("subscriber's details", async ({ page }) => {
+
+        await page.goto(base_url);
+        await page.locator(subscriber.list_navigate).click();
+        await page.locator(subscriber.search_list).fill(list_name);
+        await page.waitForTimeout(3000);
+        await page.locator(subscriber.select_list).click();
+        await page.locator(subscriber.search_subscriber).fill(subscriber_email);
+        await page.waitForTimeout(3000);
+        await page.locator(subscriber.check_subscriber).click();
+        await page.locator(subscriber.mark_subscriber_unsubscribed).click();
+        await page.waitForTimeout(3000);
+        await page.locator(subscriber.search_list).fill("");
+        await page.waitForTimeout(3000);
+
+    })
+}
+
+function subscribe_subscriber(list_name, subscriber_email) {
+    test("subscriber's details", async ({ page }) => {
+
+        await page.goto(base_url);
+        await page.locator(subscriber.list_navigate).click();
+        await page.locator(subscriber.search_list).fill(list_name);
+        await page.waitForTimeout(3000);
+        await page.locator(subscriber.select_list).click();
+        await page.locator(subscriber.search_subscriber).fill(subscriber_email);
+        await page.waitForTimeout(3000);
+        await page.locator(subscriber.check_subscriber).click();
+        await page.locator(subscriber.mark_subscriber_subscribed).click();
+        await page.waitForTimeout(3000);
+        await page.locator(subscriber.search_list).fill("");
+        await page.waitForTimeout(3000);
+
+    })
+}
+
 
 module.exports = {
     create_subscriber,
     add_subscriber,
     details_subscriber,
     delete_subscriber,
+    unsubscribe_subscriber,
+    subscribe_subscriber,
 }
