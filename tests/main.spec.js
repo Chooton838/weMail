@@ -1,14 +1,16 @@
 require('dotenv').config()
 const { test } = require('@playwright/test');
 const { camp_data, list_data, subscriber_data,
-  form_data } = require("../utils/data");
+  form_data, integration_data } = require("../utils/data");
 
 const login = require("./login");
+const overview = require("./overview.js");
 const camp = require("./campaign");
 const list = require("./list.js");
 const auto = require("./automation");
 const subscriber = require("./subscriber");
 const forms = require("./forms.js");
+const ecom = require("./ecom_integration.js");
 
 test.describe.configure({ mode: "serial" });
 
@@ -16,6 +18,9 @@ test.describe("wemail Automation", async () => {
 
   /* ---- Login ---- */
   //login.login(process.env.USER_NAME, process.env.PASSWORD);
+
+  /* ---- Overview ---- */
+  //overview.overview_details();
 
   /* ---- List ---- */
   //list.list_create(list_data.list_name, list_data.list_description);
@@ -27,7 +32,7 @@ test.describe("wemail Automation", async () => {
   //subscriber.add_subscriber(list_data.list_name);
   //subscriber.details_subscriber(list_data.list_name, subscriber_data.subscriber_email);
   //subscriber.delete_subscriber(list_data.list_name, subscriber_data.subscriber_email);
-  subscriber.subscribe_subscriber(list_data.list_name, subscriber_data.subscriber_email);
+  //subscriber.subscribe_subscriber(list_data.list_name, subscriber_data.subscriber_email);
   //subscriber.unsubscribe_subscriber(list_data.list_name, subscriber_data.subscriber_email);
 
 
@@ -48,5 +53,10 @@ test.describe("wemail Automation", async () => {
   //forms.trash_form(form_data.form_name);
   //forms.delete_form(form_data.form_name);
   //forms.update_form_status(form_data.form_name);
+
+  /* ---- Ecommerce Integration ---- */
+  //ecom.edd_integration(integration_data.list_name);
+  //ecom.wcom_integration(integration_data.list_name);
+  ecom.disconnect_sync(integration_data.integration_name)
 
 })

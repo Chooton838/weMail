@@ -113,4 +113,20 @@ module.exports = {
 
     },
 
+    integration: {
+        navigate: '//li/a[text()="Integrations"]',
+        e_com_integration: '//li/a[contains(text(),"E-commerce")]',
+        wcom_status: '//h3[contains(text(),"WooCommerce")]/../../span',
+        edd_status: '//h3[contains(text(),"EDD")]/../../span',
+        wcom: '//h3[contains(text(),"WooCommerce")]',
+        edd: '//h3[contains(text(),"EDD")]',
+        select_list: '.multiselect__placeholder',
+        list_name: '//input[@placeholder="Select Lists"]',
+        sync: '//p/label[1]',
+        authorize: '//button[contains(text(),"Authorize")]',
+        confirm: '//div/p/a[text()="here"]',
+        save: '//button[contains(text(),"Save Settings")]',
+
+    },
+
 }

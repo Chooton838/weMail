@@ -1,5 +1,6 @@
 const { test } = require('@playwright/test');
 const { camp } = require('../utils/locators');
+const { base_url } = require('../utils/data');
 
 
 function campaign_create(camp_name, camp_subject, lists_name) {
@@ -39,7 +40,7 @@ function campaign_delete(camp_name) {
         await page.locator(camp.camp_del).click();
         await page.locator(camp.del).click();
         await page.locator(camp.camp_search).fill("");
-        await page.waitForTimeout(3000);
+        //await page.waitForTimeout(3000);
     })
 }
 
@@ -51,8 +52,12 @@ function campaign_details(camp_name) {
         await page.locator(camp.camp_search).fill(camp_name);
         await page.locator(camp.camp_hover).hover();
         await page.locator(camp.camp_details).click();
-        await page.waitForTimeout(3000);
-    })
+        await page.waitForTimeout(5000);
+
+        // const name = await page.locator('//h1[@class="!wem-font-semibold"]').innerText();
+        // console.log(name);
+
+    });
 }
 
 

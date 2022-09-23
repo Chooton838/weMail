@@ -10,7 +10,7 @@ module.exports = {
     },
 
     camp_data: {
-        camp_name: "Demo Campaign X1",
+        camp_name: "demo camp 4",
         camp_subject: "Demo Campaign X1",
         lists_name: ["demo_list_4", "edd-user"],
     },
@@ -27,5 +27,10 @@ module.exports = {
         form_name: 'Test Form N1',
         list_name: 'edd',
     },
+
+    integration_data: {
+        list_name: 'edd',
+        integration_name: 'WooCommerce',
+    }
 
 }
