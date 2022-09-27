@@ -31,6 +31,16 @@ module.exports = {
     integration_data: {
         list_name: 'edd',
         integration_name: 'WooCommerce',
-    }
+    },
 
+    settings_data: {
+        mail_server: 'smtp.mailtrap.io',
+        port: '2525',
+        encryption: 'tls',
+        limit: '3600',
+        from_name: 'Mozammel Hossin',
+        from_email: 'hossinmozammel838@gmail.com',
+        reply_to_name: 'Mozammel Hossin',
+        reply_to_email: 'hossinmozammel838@gmail.com',
+    }
 }

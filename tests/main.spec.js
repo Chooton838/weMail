@@ -11,13 +11,14 @@ const auto = require("./automation");
 const subscriber = require("./subscriber");
 const forms = require("./forms.js");
 const ecom = require("./ecom_integration.js");
+const settings = require("./settings.js");
 
 test.describe.configure({ mode: "serial" });
 
 test.describe("wemail Automation", async () => {
 
   /* ---- Login ---- */
-  //login.login(process.env.USER_NAME, process.env.PASSWORD);
+  login.login(process.env.USER_NAME, process.env.PASSWORD);
 
   /* ---- Overview ---- */
   //overview.overview_details();
@@ -35,9 +36,8 @@ test.describe("wemail Automation", async () => {
   //subscriber.subscribe_subscriber(list_data.list_name, subscriber_data.subscriber_email);
   //subscriber.unsubscribe_subscriber(list_data.list_name, subscriber_data.subscriber_email);
 
-
   /* ---- Campaign ---- */
-  //camp.campaign_create(camp_data.camp_name, camp_data.camp_subject, camp_data.lists_name);
+  camp.campaign_create(camp_data.camp_name, camp_data.camp_subject, camp_data.lists_name);
   //camp.campaign_details(camp_data.camp_name);
   //camp.campaign_delete(camp_data.camp_name);
 
@@ -55,8 +55,12 @@ test.describe("wemail Automation", async () => {
   //forms.update_form_status(form_data.form_name);
 
   /* ---- Ecommerce Integration ---- */
-  //ecom.edd_integration(integration_data.list_name);
-  //ecom.wcom_integration(integration_data.list_name);
-  ecom.disconnect_sync(integration_data.integration_name)
+  // ecom.edd_integration(integration_data.list_name);
+  // ecom.wcom_integration(integration_data.list_name);
+  // ecom.disconnect_sync(integration_data.integration_name)
+
+  /* ---- Ecommerce Integration ---- */
+  //settings.email_gateway_smtp();
+  //settings.configure_form_and_reply_to();
 
 })

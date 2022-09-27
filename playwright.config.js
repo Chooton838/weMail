@@ -50,6 +50,7 @@ const config = {
     launchOptions: {
       slowMo: 3000,
     },
+
   },
 
   /* Configure projects for major browsers */

@@ -8,7 +8,9 @@ function login(user_name, password) {
 
     fs.writeFile('state.json', '{"cookies":[],"origins": []}', function () { });
 
-    const browser = await chromium.launch();
+    const browser = await chromium.launch({
+      viewport: null
+    });
     const page = await browser.newPage();
     await page.goto(base_url);
     await page.locator(lgn.email).fill(user_name);

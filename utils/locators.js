@@ -126,6 +126,31 @@ module.exports = {
         authorize: '//button[contains(text(),"Authorize")]',
         confirm: '//div/p/a[text()="here"]',
         save: '//button[contains(text(),"Save Settings")]',
+        integration_title: '//section/h1',
+        disconnect: '//button[contains(text(),"Disconnect")]',
+        confirm_disconnect: '//div[@class="swal-button-container"]/button[contains(text(),"Disconnect")]',
+        cancel: '//a[contains(text(),"Cancel")]',
+
+    },
+
+    settings: {
+        navigate: '//div[@class="wp-menu-name" and contains(text(), "weMail")]/../../ul/li/a[text()="Settings"]',
+        smtp: '//h3[text()="SMTP"]',
+        edit_credential: '//button[@type="button" and contains(text(), "Edit Credential")]',
+        mail_server: '//input[@placeholder="smtp.gmail.com"]',
+        port: '//input[@placeholder="587"]',
+        encryption: '.form-control',
+        username: '//strong[text()="Username"]/../input[@type="text"]',
+        password: '//input[@type="password"]',
+        limit: '//strong[text()="Limit"]/../input[@type="text"]',
+        next: '//button[@type="button" and contains(text(), "Next")]',
+        hover_configure: '//div[@class="padding-10 enable-overlay"]',
+        configure: '//div[@class="padding-10 enable-overlay"]/button',
+        from_name: '(//input[@type="text" and @class="block"])[1]',
+        from_email: '(//input[@type="text" and @class="block"])[2]',
+        reply_to_name: '(//input[@type="text" and @class="block"])[3]',
+        reply_to_email: '(//input[@type="text" and @class="block"])[4]',
+        save_changes: '//button[@type="button" and contains(text(),"Save Changes")]',
 
     },
 
